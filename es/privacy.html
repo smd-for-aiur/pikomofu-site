@@ -6,9 +6,10 @@
 :root{--bg:#EEF5FA;--paper:#fff;--ink:#3A2F45;--mute:#6F6480;--line:#D4DCE5;--pink:#C93A5A}
 @media (prefers-color-scheme:dark){:root{--bg:#1C2029;--paper:#262B36;--ink:#F0ECF4;--mute:#ABA4B6;--line:#3A4150;--pink:#FF8FB0}}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 -apple-system,"Hiragino Sans","Apple SD Gothic Neo",system-ui,sans-serif}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 -apple-system,BlinkMacSystemFont,system-ui,"Hiragino Sans","Apple SD Gothic Neo",sans-serif}
 main{max-width:720px;margin:0 auto;padding:28px 16px 48px}
 h1,h2,.brand{font-family:"DotGothic16",-apple-system,sans-serif;font-weight:400}
+:lang(ru) :is(h1,h2),:lang(zh) :is(h1,h2),:lang(ko) :is(h1,h2){font-family:inherit;font-weight:600}
 h1{font-size:28px;margin:8px 0 4px}h2{font-size:19px;margin:0 0 6px}
 p{margin:6px 0}.mute{color:var(--mute);font-size:14px}
 a{color:var(--pink)}
