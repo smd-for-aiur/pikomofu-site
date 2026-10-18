@@ -1,13 +1,16 @@
 <!doctype html><html lang="zh-Hans"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>隐私政策 · Pikomofu</title>
 <link rel="icon" href="../icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#EEF5FA;--paper:#fff;--ink:#3A2F45;--mute:#6F6480;--line:#D4DCE5;--pink:#C93A5A}
 @media (prefers-color-scheme:dark){:root{--bg:#1C2029;--paper:#262B36;--ink:#F0ECF4;--mute:#ABA4B6;--line:#3A4150;--pink:#FF8FB0}}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 -apple-system,BlinkMacSystemFont,system-ui,"Hiragino Sans","Apple SD Gothic Neo",sans-serif}
-main{max-width:720px;margin:0 auto;padding:28px 16px 48px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 -apple-system,BlinkMacSystemFont,system-ui,"Hiragino Sans","Apple SD Gothic Neo",sans-serif;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;overflow-x:hidden}
+main{max-width:720px;width:100%;margin:0 auto;padding:28px 16px 24px;flex:1 0 auto}
+.lawn{width:100%;flex:none;overflow:hidden;height:160px}
+@media (max-width:519px){.lawn{height:120px}}
+.lead p{margin:0 0 10px}.lead .free{margin-top:14px}
 h1,h2,.brand{font-family:"DotGothic16",-apple-system,sans-serif;font-weight:400}
 :lang(ru) :is(h1,h2),:lang(zh) :is(h1,h2),:lang(ko) :is(h1,h2){font-family:inherit;font-weight:600}
 h1{font-size:28px;margin:8px 0 4px}h2{font-size:19px;margin:0 0 6px}
@@ -20,9 +23,17 @@ nav{display:flex;gap:14px;flex-wrap:wrap;font-size:14px;margin-bottom:14px}
 .links a{display:inline-block;margin:6px 12px 0 0}
 footer{margin-top:28px;font-size:13px;color:var(--mute)}
 footer .langs{line-height:2}
+footer .sign{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.love{font-family:"Hachi Maru Pop",cursive;font-size:16px;color:var(--pink);display:inline-flex;align-items:center;gap:6px;letter-spacing:.02em}
+.love svg{width:14px;height:12px;shape-rendering:crispEdges;animation:beat 1.6s ease-in-out infinite}
+@keyframes beat{0%,60%,100%{transform:scale(1)}10%,30%{transform:scale(1.18)}20%{transform:scale(1.04)}}
+@media (prefers-reduced-motion:reduce){.love svg{animation:none}}
 </style>
 <main>
 <nav><a class="brand" href="../zh-Hans/index.html">Pikomofu</a><span style="flex:1"></span><a href="support.html">支持</a><a href="privacy.html">隐私政策</a></nav>
 <h1>隐私政策</h1><p class="mute">最后更新日期: 2026年10月17日</p><p>Pikomofu 是由 smd 制作的 App。本页说明此 App 如何处理你的信息。</p><div class="card"><h2>1. 收集的信息</h2><p>Pikomofu 不会收集你的姓名、电子邮件地址、位置、设备标识符等个人信息。没有账户，也不使用广告、追踪或分析工具。</p></div><div class="card"><h2>2. 保存在设备上的数据</h2><p>你的毛孩子数据（名字、外观、照顾记录）和设置，只保存在你的 iPhone 和配对的 Apple Watch 上，绝不会发送给开发者。删除 App 后即会清除。</p></div><div class="card"><h2>3. 天气（仅在开启时）</h2><p>你所选地区的大致位置（纬度和经度）会发送到 Apple 的天气服务（WeatherKit），用于获取天气预报。绝不会使用你 iPhone 的位置信息。按名称搜索日本以外的城市时，你输入的文字会发送到 Apple 地图搜索。这些均适用 Apple 的隐私政策。</p></div><div class="card"><h2>4. 购买</h2><p>Pikomofu 通行证和“支持作者”的购买，均通过 Apple（App Store）进行。开发者不会收到你的付款信息。</p></div><div class="card"><h2>5. 通知</h2><p>“想要你陪的时候通知”是在你的设备上设定的提醒，不会向外部发送任何信息。</p></div><div class="card"><h2>6. 儿童</h2><p>Pikomofu 不收集任何个人信息，因此也不会收集儿童的信息。</p></div><div class="card"><h2>7. 政策变更</h2><p>如本政策有变更，将在此页面公布。</p></div><div class="card"><h2>联系我们</h2><p><a href="mailto:mofu@pikomofu.com">mofu@pikomofu.com</a></p><p class="mute">如果能告诉我们你的 iPhone 机型和 iOS 版本，会很有帮助。</p></div>
-<footer><p class="langs"><a href="../index.html">日本語</a> · <a href="../en/index.html">English</a> · <a href="../ko/index.html">한국어</a> · <a href="../zh-Hant/index.html">繁體中文</a> · <a href="../es/index.html">Español</a> · <a href="../pt-BR/index.html">Português (Brasil)</a> · <a href="../fr/index.html">Français</a> · <a href="../it/index.html">Italiano</a> · <a href="../de/index.html">Deutsch</a> · <a href="../id/index.html">Bahasa Indonesia</a> · <a href="../ru/index.html">Русский</a></p><p>© 2026 smd</p></footer>
-</main></html>
+<footer><p class="langs"><a href="../index.html">日本語</a> · <a href="../en/index.html">English</a> · <a href="../ko/index.html">한국어</a> · <a href="../zh-Hant/index.html">繁體中文</a> · <a href="../es/index.html">Español</a> · <a href="../pt-BR/index.html">Português (Brasil)</a> · <a href="../fr/index.html">Français</a> · <a href="../it/index.html">Italiano</a> · <a href="../de/index.html">Deutsch</a> · <a href="../id/index.html">Bahasa Indonesia</a> · <a href="../ru/index.html">Русский</a></p><p class="sign">© 2026 smd<span class="love">made with love<svg viewBox="0 0 7 6" aria-hidden="true"><rect x="1" y="0" width="1" height="1" fill="#F0607E"/><rect x="2" y="0" width="1" height="1" fill="#F0607E"/><rect x="4" y="0" width="1" height="1" fill="#F0607E"/><rect x="5" y="0" width="1" height="1" fill="#F0607E"/><rect x="0" y="1" width="1" height="1" fill="#F0607E"/><rect x="1" y="1" width="1" height="1" fill="#F0607E"/><rect x="2" y="1" width="1" height="1" fill="#F0607E"/><rect x="3" y="1" width="1" height="1" fill="#F0607E"/><rect x="4" y="1" width="1" height="1" fill="#F0607E"/><rect x="5" y="1" width="1" height="1" fill="#F0607E"/><rect x="6" y="1" width="1" height="1" fill="#F0607E"/><rect x="0" y="2" width="1" height="1" fill="#F0607E"/><rect x="1" y="2" width="1" height="1" fill="#F0607E"/><rect x="2" y="2" width="1" height="1" fill="#F0607E"/><rect x="3" y="2" width="1" height="1" fill="#F0607E"/><rect x="4" y="2" width="1" height="1" fill="#F0607E"/><rect x="5" y="2" width="1" height="1" fill="#F0607E"/><rect x="6" y="2" width="1" height="1" fill="#F0607E"/><rect x="1" y="3" width="1" height="1" fill="#F0607E"/><rect x="2" y="3" width="1" height="1" fill="#F0607E"/><rect x="3" y="3" width="1" height="1" fill="#F0607E"/><rect x="4" y="3" width="1" height="1" fill="#F0607E"/><rect x="5" y="3" width="1" height="1" fill="#F0607E"/><rect x="2" y="4" width="1" height="1" fill="#F0607E"/><rect x="3" y="4" width="1" height="1" fill="#F0607E"/><rect x="4" y="4" width="1" height="1" fill="#F0607E"/><rect x="3" y="5" width="1" height="1" fill="#F0607E"/><rect x="1" y="1" width="1" height="1" fill="#FFC2D0"/></svg></span></p></footer>
+</main>
+<div class="lawn" id="lawn"></div>
+<script src="../bg.js" data-pets="../pets.png" defer></script>
+</html>

@@ -1,13 +1,16 @@
 <!doctype html><html lang="de"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Datenschutzerklärung · Pikomofu</title>
 <link rel="icon" href="../icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#EEF5FA;--paper:#fff;--ink:#3A2F45;--mute:#6F6480;--line:#D4DCE5;--pink:#C93A5A}
 @media (prefers-color-scheme:dark){:root{--bg:#1C2029;--paper:#262B36;--ink:#F0ECF4;--mute:#ABA4B6;--line:#3A4150;--pink:#FF8FB0}}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 -apple-system,BlinkMacSystemFont,system-ui,"Hiragino Sans","Apple SD Gothic Neo",sans-serif}
-main{max-width:720px;margin:0 auto;padding:28px 16px 48px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 -apple-system,BlinkMacSystemFont,system-ui,"Hiragino Sans","Apple SD Gothic Neo",sans-serif;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;overflow-x:hidden}
+main{max-width:720px;width:100%;margin:0 auto;padding:28px 16px 24px;flex:1 0 auto}
+.lawn{width:100%;flex:none;overflow:hidden;height:160px}
+@media (max-width:519px){.lawn{height:120px}}
+.lead p{margin:0 0 10px}.lead .free{margin-top:14px}
 h1,h2,.brand{font-family:"DotGothic16",-apple-system,sans-serif;font-weight:400}
 :lang(ru) :is(h1,h2),:lang(zh) :is(h1,h2),:lang(ko) :is(h1,h2){font-family:inherit;font-weight:600}
 h1{font-size:28px;margin:8px 0 4px}h2{font-size:19px;margin:0 0 6px}
@@ -20,9 +23,17 @@ nav{display:flex;gap:14px;flex-wrap:wrap;font-size:14px;margin-bottom:14px}
 .links a{display:inline-block;margin:6px 12px 0 0}
 footer{margin-top:28px;font-size:13px;color:var(--mute)}
 footer .langs{line-height:2}
+footer .sign{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.love{font-family:"Hachi Maru Pop",cursive;font-size:16px;color:var(--pink);display:inline-flex;align-items:center;gap:6px;letter-spacing:.02em}
+.love svg{width:14px;height:12px;shape-rendering:crispEdges;animation:beat 1.6s ease-in-out infinite}
+@keyframes beat{0%,60%,100%{transform:scale(1)}10%,30%{transform:scale(1.18)}20%{transform:scale(1.04)}}
+@media (prefers-reduced-motion:reduce){.love svg{animation:none}}
 </style>
 <main>
 <nav><a class="brand" href="../de/index.html">Pikomofu</a><span style="flex:1"></span><a href="support.html">Support</a><a href="privacy.html">Datenschutzerklärung</a></nav>
 <h1>Datenschutzerklärung</h1><p class="mute">Zuletzt aktualisiert: 17. Oktober 2026</p><p>Pikomofu ist eine App von smd. Diese Seite erklärt, wie die App mit deinen Daten umgeht.</p><div class="card"><h2>1. Was wir erfassen</h2><p>Pikomofu erfasst keine personenbezogenen Daten wie deinen Namen, deine E-Mail-Adresse, deinen Standort oder Gerätekennungen. Es gibt kein Konto. Die App nutzt keine Werbung, kein Tracking und keine Analyse-Tools.</p></div><div class="card"><h2>2. Was auf deinem Gerät bleibt</h2><p>Deine Tiere (Namen, Aussehen, Pflegeverlauf) und deine Einstellungen werden nur auf deinem iPhone und deiner gekoppelten Apple Watch gespeichert. Sie werden nie an den Entwickler gesendet. Wenn du die App löschst, werden sie entfernt.</p></div><div class="card"><h2>3. Wetter (nur wenn du es einschaltest)</h2><p>Die ungefähre Position (Breiten- und Längengrad) des gewählten Ortes wird an den Wetterdienst von Apple (WeatherKit) gesendet, um eine Vorhersage abzurufen. Der Standort deines iPhone wird nie verwendet. Wenn du per Namen nach einer Stadt außerhalb Japans suchst, wird deine Eingabe an die Suche von Apple Karten gesendet. Dafür gilt die Datenschutzrichtlinie von Apple.</p></div><div class="card"><h2>4. Käufe</h2><p>Der Pikomofu Pass und Trinkgelder werden über Apple (den App Store) gekauft. Der Entwickler erhält nie deine Zahlungsdaten.</p></div><div class="card"><h2>5. Mitteilungen</h2><p>Die Erinnerung „Melden, wenn dein Tier spielen will“ wird auf deinem Gerät geplant. Es wird nichts nach außen gesendet.</p></div><div class="card"><h2>6. Kinder</h2><p>Da Pikomofu keine personenbezogenen Daten erfasst, erfasst es auch keine von Kindern.</p></div><div class="card"><h2>7. Änderungen</h2><p>Wenn sich diese Richtlinie ändert, wird die Änderung auf dieser Seite veröffentlicht.</p></div><div class="card"><h2>Kontakt</h2><p><a href="mailto:mofu@pikomofu.com">mofu@pikomofu.com</a></p><p class="mute">Es hilft, wenn du dein iPhone-Modell und deine iOS-Version angibst.</p></div>
-<footer><p class="langs"><a href="../index.html">日本語</a> · <a href="../en/index.html">English</a> · <a href="../ko/index.html">한국어</a> · <a href="../zh-Hant/index.html">繁體中文</a> · <a href="../zh-Hans/index.html">简体中文</a> · <a href="../es/index.html">Español</a> · <a href="../pt-BR/index.html">Português (Brasil)</a> · <a href="../fr/index.html">Français</a> · <a href="../it/index.html">Italiano</a> · <a href="../id/index.html">Bahasa Indonesia</a> · <a href="../ru/index.html">Русский</a></p><p>© 2026 smd</p></footer>
-</main></html>
+<footer><p class="langs"><a href="../index.html">日本語</a> · <a href="../en/index.html">English</a> · <a href="../ko/index.html">한국어</a> · <a href="../zh-Hant/index.html">繁體中文</a> · <a href="../zh-Hans/index.html">简体中文</a> · <a href="../es/index.html">Español</a> · <a href="../pt-BR/index.html">Português (Brasil)</a> · <a href="../fr/index.html">Français</a> · <a href="../it/index.html">Italiano</a> · <a href="../id/index.html">Bahasa Indonesia</a> · <a href="../ru/index.html">Русский</a></p><p class="sign">© 2026 smd<span class="love">made with love<svg viewBox="0 0 7 6" aria-hidden="true"><rect x="1" y="0" width="1" height="1" fill="#F0607E"/><rect x="2" y="0" width="1" height="1" fill="#F0607E"/><rect x="4" y="0" width="1" height="1" fill="#F0607E"/><rect x="5" y="0" width="1" height="1" fill="#F0607E"/><rect x="0" y="1" width="1" height="1" fill="#F0607E"/><rect x="1" y="1" width="1" height="1" fill="#F0607E"/><rect x="2" y="1" width="1" height="1" fill="#F0607E"/><rect x="3" y="1" width="1" height="1" fill="#F0607E"/><rect x="4" y="1" width="1" height="1" fill="#F0607E"/><rect x="5" y="1" width="1" height="1" fill="#F0607E"/><rect x="6" y="1" width="1" height="1" fill="#F0607E"/><rect x="0" y="2" width="1" height="1" fill="#F0607E"/><rect x="1" y="2" width="1" height="1" fill="#F0607E"/><rect x="2" y="2" width="1" height="1" fill="#F0607E"/><rect x="3" y="2" width="1" height="1" fill="#F0607E"/><rect x="4" y="2" width="1" height="1" fill="#F0607E"/><rect x="5" y="2" width="1" height="1" fill="#F0607E"/><rect x="6" y="2" width="1" height="1" fill="#F0607E"/><rect x="1" y="3" width="1" height="1" fill="#F0607E"/><rect x="2" y="3" width="1" height="1" fill="#F0607E"/><rect x="3" y="3" width="1" height="1" fill="#F0607E"/><rect x="4" y="3" width="1" height="1" fill="#F0607E"/><rect x="5" y="3" width="1" height="1" fill="#F0607E"/><rect x="2" y="4" width="1" height="1" fill="#F0607E"/><rect x="3" y="4" width="1" height="1" fill="#F0607E"/><rect x="4" y="4" width="1" height="1" fill="#F0607E"/><rect x="3" y="5" width="1" height="1" fill="#F0607E"/><rect x="1" y="1" width="1" height="1" fill="#FFC2D0"/></svg></span></p></footer>
+</main>
+<div class="lawn" id="lawn"></div>
+<script src="../bg.js" data-pets="../pets.png" defer></script>
+</html>
