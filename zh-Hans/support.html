@@ -23,9 +23,9 @@ nav{display:flex;gap:14px;flex-wrap:wrap;font-size:14px;margin-bottom:14px}
 .card{background:var(--paper);border:2px solid var(--line);border-radius:22px;padding:16px 18px;margin:12px 0}
 .hero{text-align:center;margin:18px 0 22px}
 .hero h1{margin:0;line-height:0}
-/* the logo is pixel art (142×59): whole multiples only, 2× on phones, 3× from 520px */
-.hero h1 img{width:284px;height:118px;image-rendering:pixelated}
-@media (min-width:520px){.hero h1 img{width:426px;height:177px}}
+/* the logo (2026-10-25, Tools/brand/sian4): vector, the app's ink by day and white on the night sky */
+.hero h1 img{width:min(300px,78vw);height:auto}
+@media (min-width:520px){.hero h1 img{width:380px}}
 .hero .mute{margin-top:10px}
 /* Apple's badge, unaltered: black on light, white on dark; at least 40px tall, clear space around it */
 .get{display:inline-block;margin-top:18px;line-height:0}.get img{height:54px;width:auto}

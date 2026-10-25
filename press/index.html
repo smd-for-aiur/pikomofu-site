@@ -23,9 +23,9 @@ nav{display:flex;gap:14px;flex-wrap:wrap;font-size:14px;margin-bottom:14px}
 .card{background:var(--paper);border:2px solid var(--line);border-radius:22px;padding:16px 18px;margin:12px 0}
 .hero{text-align:center;margin:18px 0 22px}
 .hero h1{margin:0;line-height:0}
-/* the logo is pixel art (142×59): whole multiples only, 2× on phones, 3× from 520px */
-.hero h1 img{width:284px;height:118px;image-rendering:pixelated}
-@media (min-width:520px){.hero h1 img{width:426px;height:177px}}
+/* the logo (2026-10-25, Tools/brand/sian4): vector, the app's ink by day and white on the night sky */
+.hero h1 img{width:min(300px,78vw);height:auto}
+@media (min-width:520px){.hero h1 img{width:380px}}
 .hero .mute{margin-top:10px}
 /* Apple's badge, unaltered: black on light, white on dark; at least 40px tall, clear space around it */
 .get{display:inline-block;margin-top:18px;line-height:0}.get img{height:54px;width:auto}
@@ -51,7 +51,7 @@ footer .sign{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .assets{display:flex;flex-wrap:wrap;gap:14px;align-items:flex-end;margin-top:10px}
 .assets a{display:flex;flex-direction:column;gap:6px;font-size:14px;text-decoration:none}
 .assets img{border-radius:12px}
-.assets .logo img{width:284px;height:118px;max-width:100%;object-fit:contain;image-rendering:pixelated;border-radius:0}
+.assets .logo img{width:284px;height:auto;max-width:100%;border-radius:0}
 .assets .icon img{width:118px;height:118px;border-radius:26px}
 .assets .banner{flex-basis:100%}.assets .banner img{width:100%;max-width:560px;height:auto}
 .shots{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:8px}
@@ -62,12 +62,12 @@ footer .sign{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 <main>
 <nav><a class="brand" href="../index.html">Pikomofu</a><span style="flex:1"></span><a href="../support.html">サポート</a><a href="../privacy.html">プライバシーポリシー</a></nav>
 <div class="press"><h1>プレスキット</h1><p>Pikomofu をご紹介くださる方へ。ファクトシート、紹介文、画像をまとめました。</p>
-<div class="card"><a class="btn" href="../press/pikomofu-press-kit.zip" download>プレスキットをダウンロード</a><p class="mute">ZIP・5.5 MB：ロゴ、アイコン、スクリーンショット（日本語・英語・韓国語）、バナー、15 秒の映像、ファクトシート</p></div>
+<div class="card"><a class="btn" href="../press/pikomofu-press-kit.zip" download>プレスキットをダウンロード</a><p class="mute">ZIP・5.8 MB：ロゴ、アイコン、スクリーンショット（日本語・英語・韓国語）、バナー、15 秒の映像、ファクトシート</p></div>
 <div class="card"><h2>ファクトシート</h2><dl class="facts"><dt>アプリ名</dt><dd>Pikomofu（ピコモフ）</dd><dt>開発</dt><dd>smd（日本・個人開発）</dd><dt>公開日</dt><dd>2026年10月20日</dd><dt>価格</dt><dd>無料（1匹）。Pikomofu パス 980円（買い切り・いちど買えばずっと：Apple Watch・ウィジェット・5匹まで。ファミリー共有対応）</dd><dt>そのほか</dt><dd>広告・サブスク・トラッキングなし。あとから増えるなかまやきせかえも無料。パスを買った人にだけ、何も開かない「おうえん」（チップ）が表示されます</dd><dt>対応</dt><dd>iPhone・iPad（iOS 17 以降）、Apple Watch（watchOS 10 以降）、ホーム画面・ロック画面のウィジェット</dd><dt>言語</dt><dd>12 言語（日本語・英語・韓国語・繁体字中国語・簡体字中国語・スペイン語・ポルトガル語〈ブラジル〉・フランス語・イタリア語・ドイツ語・インドネシア語・ロシア語）</dd><dt>プライバシー</dt><dd>データの収集なし。アカウント登録なし</dd><dt>カテゴリ</dt><dd>ライフスタイル／エンターテインメント（4+）</dd><dt>配信</dt><dd>147 の国と地域</dd><dt>リンク</dt><dd><a href="https://apps.apple.com/app/apple-store/id6823616416?pt=616456&amp;ct=press&amp;mt=8">App Store</a> ・ <a href="https://pikomofu.com">pikomofu.com</a> ・ <a href="https://x.com/pikomofu_app">@pikomofu_app</a></dd></dl></div>
 <div class="card"><h2>紹介文</h2><h3>短い紹介</h3><p>ほんとうの空の下の、ちいさなおにわ。ドット絵の犬や猫が、iPhone の中でのんびり暮らすアプリです。1匹は無料、広告なし。</p><h3>長い紹介</h3><p>Pikomofu（ピコモフ）は、32×32 ドットの小さな犬か猫が、iPhone の中のおにわで暮らすアプリです。犬12種とミックス・猫8種から、毛色や耳・しっぽをえらんで「うちの子」をむかえます。</p><p>おにわの空は、ほんとうの時間と季節にあわせてうつりかわります。朝と夕方の色、本物の月の満ち欠け、春の桜から冬の枝まで。せっていでえらんだ地域の天気を、おにわに映すこともできます（iPhone の位置情報は使いません）。</p><p>お世話は、ごはん・おみず・おそうじ・シャワーだけ。遊びはその子が勝手にします。死んでしまうことはなく、しばらく会えないと、うるうるした目で待っています。</p><p>犬や猫と暮らしたことのある人なら、きっと気づく小さなしぐさを、ひとつずつ描きました。どんなしぐさがあるのかは、あえて説明していません。</p><p>1匹は無料で、広告もサブスクもありません。Apple Watch、ウィジェット、5匹までいっしょに暮らせる「Pikomofu パス」（980円）は一度だけのお買い物で、いちど買えばずっと使えます。これから増えるなかまやきせかえも、アップデートで無料でとどきます。</p></div>
 <div class="card"><h2>おもな特長</h2><ul class="feat"><li><b>ドット絵の犬と猫</b>　32×32 の正面すわり。犬12種・猫8種とミックス、毛色、アクセサリーをえらんでむかえます。</li><li><b>ほんとうの空</b>　空の色は時刻と季節で変わり、夜には本物の満ち欠けの月がのぼります。桜の木も一年で姿を変えます。</li><li><b>ほんとうの天気（えらべる）</b>　47都道府県か世界のまちをえらぶと、晴れ・くもり・雨・雪がおにわに。位置情報は使いません。</li><li><b>ゆっくりのお世話</b>　ごはん・おみず・おそうじ・シャワー。死なない。「なかよし」は上がるだけで、下がりません。</li><li><b>ウィジェットと Apple Watch</b>　ホーム画面のウィジェットは15分ごとに場面が変わり、子をタップするとなでられます。ロック画面、Apple Watch のアプリとコンプリケーションにも（Pikomofu パス）。</li><li><b>ともだちに みせる</b>　いまのおにわを、その子の切手を貼ったはがきにして送れます。</li><li><b>小さなしぐさ</b>　犬や猫と暮らした人なら気づくしぐさが描いてあります。ひとつひとつは説明しません。</li><li><b>アクセシビリティ</b>　VoiceOver と音声コントロールでおにわの様子を読み上げ、なでたり拾ったりできます。文字の大きさ、視差効果を減らす設定にも対応。</li><li><b>アプリのアイコン</b>　しば・三毛・くろねこなど 8 種類から、ホーム画面のアイコンをえらべます（無料）。</li><li><b>おひっこし</b>　機種変更のときは iCloud にあずけた子をむかえられます。ファイルで新しい iPhone へ、さとおやに出すこともできます。</li></ul></div>
 <div class="card"><h2>画像</h2><p class="mute">画像は Pikomofu の紹介にご自由にお使いください。ドット絵を拡大するときは、にじまないよう整数倍・ニアレストネイバーでお願いします。</p>
-<div class="assets"><a class="logo" href="../press/pikomofu-logo-8x.png"><img src="../logo.png" alt="Pikomofu">ロゴ（透過 PNG）</a>
+<div class="assets"><a class="logo" href="../press/pikomofu-logo.png"><img src="../logo.svg" alt="Pikomofu">ロゴ（SVG・透過 PNG）</a>
 <a class="icon" href="../press/pikomofu-icon-1024.png"><img src="../press/pikomofu-icon-1024.png" alt="">アプリアイコン（1024px）</a>
 <a class="banner" href="../press/pikomofu-banner-1680x720.png"><img src="../press/pikomofu-banner-1680x720.png" alt="" loading="lazy">バナー（1680×720）</a></div>
 <h3>スクリーンショット（日本語、1320×2868）</h3><div class="shots"><a href="../press/screenshots/ja/1.png"><img src="../press/screenshots/ja/1.png" alt="おにわ" loading="lazy"></a><a href="../press/screenshots/ja/3.png"><img src="../press/screenshots/ja/3.png" alt="本物の空と天気" loading="lazy"></a><a href="../press/screenshots/ja/5.png"><img src="../press/screenshots/ja/5.png" alt="夜の月" loading="lazy"></a><a href="../press/screenshots/ja/7.png"><img src="../press/screenshots/ja/7.png" alt="ウィジェットと Apple Watch" loading="lazy"></a></div></div>
