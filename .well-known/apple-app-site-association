@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["ZK2NEUUY8H.app.pikomofu"],
+        "components": [
+          { "/": "/v", "comment": "a friend's pet comes to visit (the pet is in the fragment)" },
+          { "/": "/v.html", "comment": "the same page by its file name" }
+        ]
+      }
+    ]
+  }
+}
