@@ -149,12 +149,8 @@
     ctx.drawImage(sq ? gardenSq : garden, hi * gw, row * gh, gw, gh, 0, 0, gw * k, gh * k);
     const top = ground - CH;
     ctx.drawImage(pet.c, px * k, top * k, CW * k, CH * k);
-    if (heart) {
-      ctx.fillStyle = '#F2577B';
-      const hx = px + 22, hy = top + pet.top - 6 - heart.rise;
-      HEART.forEach((r, y) => [...r].forEach((ch, x) => { if (ch === '#') ctx.fillRect((hx + x) * k, (hy + y) * k, k, k); }));
-    }
     const W0 = gw * k, name = cleanName(s.name);
+    let above = top + pet.top;                                        // (dots) where the heart rises from: the head, or the tag over it
     // the name tag over the pet's head: the app's key (white, an ink line, an ink ledge); the name in its pixel font,
     // one dot a whole square like the pet's (3 or 4 × the font's own size at 10 ×, 4 or 5 × at 12 ×)
     if (name) {
@@ -171,6 +167,13 @@
       ctx.fillStyle = '#FFFFFF'; rr(ctx, x0 + line, y + line, w - line * 2, hgt - line * 2, Math.max(1, r - line)); ctx.fill();
       ctx.imageSmoothingEnabled = false;
       ctx.drawImage(t.c, x0 + pad, y + Math.round((hgt - t.h * sc) / 2), tw, t.h * sc);
+      above = Math.floor(y / k);
+    }
+    // a touch: a heart rises over the head, over the name tag when there is one (it used to sit behind the tag, 2026-11-04)
+    if (heart) {
+      ctx.fillStyle = '#F2577B';
+      const hx = px + 22, hy = Math.max(0, above - 7 - heart.rise);
+      HEART.forEach((r, y) => [...r].forEach((ch, x) => { if (ch === '#') ctx.fillRect((hx + x) * k, (hy + y) * k, k, k); }));
     }
     // the logo, small, top right (white on the night sky); in the square under the cloud that drifts up there
     if (logo) {
