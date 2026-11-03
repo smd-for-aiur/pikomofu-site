@@ -50,7 +50,7 @@
   const load = src => new Promise((ok, no) => { const i = new Image(); i.onload = () => ok(i); i.onerror = no; i.src = src; });
   const sheets = {};
   const sheet = id => sheets[id] || (sheets[id] = load(`${D.dir}pets-${id}.png`).catch(e => { delete sheets[id]; throw e; }));
-  let garden, gardenSq, logo, logoNight;
+  let garden, gardenSq, logo, logoNight, started = null;
 
   // one frame of the pet, its colours snapped to the breed's own (a browser that colour-manages a PNG is put right)
   const cells = new Map();
@@ -141,6 +141,7 @@
   //      out: the shared picture (fonts at whole multiples of their grid); otherwise the preview at the screen's own pixels
   async function draw(ctx, s, { kind = 'wide', k = 10, frame = 'sit', heart = null, out = false } = {}) {
     const sq = kind === 'square', gw = sq ? SQ.w : G.w, gh = sq ? SQ.h : G.h, ground = sq ? SQ.ground : G.ground;
+    if (!(sq ? gardenSq : garden)) return;                     // (a choice made while the gardens are still on their way)
     const px = sq ? PET_X - SQ.x0 : PET_X;
     const b = breedOf(s.breed), pet = await petCanvas(s, frame);
     ctx.imageSmoothingEnabled = false;
@@ -383,6 +384,7 @@
   const urls = [];
   function stale() { dirty = true; if (!$('done').hidden) { clearTimeout(stale.t); stale.t = setTimeout(make, 300); } }
   async function make() {
+    if (started) await started;
     if (making) { await making; if (!dirty) return made; }
     dirty = false;
     const s = { ...S };
@@ -484,8 +486,9 @@
     cleanName,
   };
 
-  // ---- start
-  (async () => {
+  // ---- start (a key pressed before the gardens and the first breed are in waits for them: on a slow line the page
+  //      is up before its pictures, 2026-11-03)
+  started = (async () => {
     [garden, gardenSq] = await Promise.all([load(D.dir + 'garden.png'), load(D.dir + 'garden-sq.png')]);
     try { [logo, logoNight] = await Promise.all([load(D.logo), load(D.logoWhite)]); } catch (e) { logo = null; }
     nameBox.value = S.name;
@@ -495,7 +498,8 @@
     await fontsFor(S.name, 48); bitmaps.clear(); redraw();
     document.documentElement.classList.add('ready');
     tick();
-  })().catch(() => {
+  })();
+  started.catch(() => {
     const p = document.createElement('p'); p.className = 'oops'; p.textContent = W.error;
     scene.replaceWith(p); $('make').disabled = true;
   });
