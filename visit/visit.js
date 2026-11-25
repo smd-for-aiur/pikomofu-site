@@ -54,7 +54,9 @@
   text('#cta', T.cta); text('#free', T.free); text('#note', T.note); text('#open-note', T.openNote); text('#open-label', T.open);
   $('#store').href = D.store;
   $('#badge').src = `badges/${lang}-black.svg`; $('#badge').alt = T.badge; $('#badge-dark').srcset = `badges/${lang}-white.svg`;
-  if (android) { text('#android', T.android); $('#android').hidden = false; }
+  if (android && D.play && T.play) {   // on Google Play: Google's badge in place of Apple's (black on light and dark alike)
+    $('#store').href = D.play; $('#badge').src = `badges/play-${lang}.png`; $('#badge').alt = T.play; $('#badge-dark').srcset = `badges/play-${lang}.png`;
+  } else if (android) { text('#android', T.android); $('#android').hidden = false; }
 
   // ---- the garden
   const host = $('#garden'), cv = document.createElement('canvas');
@@ -261,7 +263,7 @@
     text('#why', '');
     // with the app, the same link opens it (until universal links are set up): the visitor comes into your own garden
     $('#open-app').href = 'pikomofu://visit#' + run;
-    $('#open').hidden = !ios;
+    $('#open').hidden = !(ios || (android && D.play));   // the Android app takes pikomofu://visit too
     document.body.className = 'has-pet';
     hint(); draw();
   }
